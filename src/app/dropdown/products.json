@@ -1,0 +1,162 @@
+[
+  {
+    "id": "1",
+    "createdAt": 1527982841,
+    "name": "Producto 1",
+    "imageUrl": "https://unsplash.it/300?image=1",
+    "price": 8,
+    "category_id": 62
+  },
+  {
+    "id": "2",
+    "createdAt": 1527982784,
+    "name": "Producto 2",
+    "imageUrl": "https://unsplash.it/300?image=2",
+    "price": 60,
+    "category_id": 5
+  },
+  {
+    "id": "3",
+    "createdAt": 1527982725,
+    "name": "Producto 3",
+    "imageUrl": "https://unsplash.it/300?image=3",
+    "price": 15,
+    "category_id": 89
+  },
+  {
+    "id": "4",
+    "createdAt": 1527982665,
+    "name": "Producto 4",
+    "imageUrl": "https://unsplash.it/300?image=4",
+    "price": 87,
+    "category_id": 68
+  },
+  {
+    "id": "5",
+    "createdAt": 1527982606,
+    "name": "Producto 5",
+    "imageUrl": "https://unsplash.it/300?image=5",
+    "price": 28,
+    "category_id": 88
+  },
+  {
+    "id": "6",
+    "createdAt": 1527982547,
+    "name": "Producto 6",
+    "imageUrl": "https://unsplash.it/300?image=6",
+    "price": 66,
+    "category_id": 62
+  },
+  {
+    "id": "7",
+    "createdAt": 1527982487,
+    "name": "Producto 7",
+    "imageUrl": "https://unsplash.it/300?image=7",
+    "price": 11,
+    "category_id": 41
+  },
+  {
+    "id": "8",
+    "createdAt": 1536368727,
+    "name": "Producto 8",
+    "imageUrl": "https://unsplash.it/300?image=8",
+    "price": 8,
+    "category_id": 55
+  },
+  {
+    "id": "9",
+    "createdAt": 1536368667,
+    "name": "Producto 9",
+    "imageUrl": "https://unsplash.it/300?image=9",
+    "price": 56,
+    "category_id": 74
+  },
+  {
+    "id": "10",
+    "createdAt": 1536368607,
+    "name": "Producto 10",
+    "imageUrl": "https://unsplash.it/300?image=10",
+    "price": 10,
+    "category_id": 39
+  },
+  {
+    "id": "11",
+    "createdAt": 1536368547,
+    "name": "Producto 11",
+    "imageUrl": "https://unsplash.it/300?image=11",
+    "price": 92,
+    "category_id": 67
+  },
+  {
+    "id": "12",
+    "createdAt": 1536368487,
+    "name": "Producto 12",
+    "imageUrl": "https://unsplash.it/300?image=12",
+    "price": 75,
+    "category_id": 51
+  },
+  {
+    "id": "13",
+    "createdAt": 1536368427,
+    "name": "Producto 13",
+    "imageUrl": "https://unsplash.it/300?image=13",
+    "price": 45,
+    "category_id": 98
+  },
+  {
+    "id": "14",
+    "createdAt": 1536368367,
+    "name": "Producto 14",
+    "imageUrl": "https://unsplash.it/300?image=14",
+    "price": 32,
+    "category_id": 78
+  },
+  {
+    "id": "15",
+    "createdAt": 1536368307,
+    "name": "Producto 15",
+    "imageUrl": "https://unsplash.it/300?image=15",
+    "price": 67,
+    "category_id": 17
+  },
+  {
+    "id": "16",
+    "createdAt": 1536368247,
+    "name": "Producto 16",
+    "imageUrl": "https://unsplash.it/300?image=16",
+    "price": 90,
+    "category_id": 87
+  },
+  {
+    "id": "17",
+    "createdAt": 1536368187,
+    "name": "Producto 17",
+    "imageUrl": "https://unsplash.it/300?image=17",
+    "price": 40,
+    "category_id": 64
+  },
+  {
+    "id": "18",
+    "createdAt": 1536368127,
+    "name": "Producto 18",
+    "imageUrl": "https://unsplash.it/300?image=18",
+    "price": 96,
+    "category_id": 39
+  },
+  {
+    "id": "19",
+    "createdAt": 1536368067,
+    "name": "Producto 19",
+    "imageUrl": "https://unsplash.it/300?image=19",
+    "price": 89,
+    "category_id": 67
+  },
+  {
+    "id": "20",
+    "createdAt": 1536368011,
+    "name": "Producto 20",
+    "imageUrl": "https://unsplash.it/300?image=20",
+    "price": 47,
+    "category_id": 49
+  }
+]

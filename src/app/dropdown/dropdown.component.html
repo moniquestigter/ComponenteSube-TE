@@ -1,0 +1,24 @@
+<div class="dx-fieldset">
+  <div class="dx-field">
+      <div class="dx-field-value">
+          <drop-down-box
+              valueExpr="ID"
+              displayExpr="name"
+              placeholder="Todo"
+              (onValueChanged)="syncTreeViewSelection($event)"
+              width="5cm"
+              position="relative"
+              class="alignright"
+          >
+      </drop-down-box>
+          <drop-down-box
+          valueExpr="ID"
+          displayExpr="name"
+          placeholder="Acciones"
+          (onValueChanged)="syncTreeViewSelection($event)"
+          width="10cm"
+      >
+  </drop-down-box>
+      </div>
+  </div>
+  
