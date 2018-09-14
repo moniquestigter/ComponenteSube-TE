@@ -9,15 +9,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 })
 export class TopBarComponent {
 
-  constructor() {}
+  constructor() { }
+
+  ngOnInit() {
+  }
+
 }
-
-@NgModule({
-  imports: [
-  ],
-  declarations: [TopBarComponent],
-  bootstrap: [TopBarComponent]
-})
-export class TopBarModule { }
-
-platformBrowserDynamic().bootstrapModule(TopBarModule);

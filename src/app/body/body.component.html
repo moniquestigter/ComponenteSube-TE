@@ -1,3 +1,37 @@
-<p>
-  body works!
-</p>
+<section class="content" >
+	<div class="box box-success">
+		<div class="box-header"></div>
+		<div class="box-body table-responsive no-padding">
+			<table class="table table-hover" *ngIf="products" >
+				<thead>
+					<tr role="row">
+						<th><input type="checkbox" class="checkbox" id="selectAll"></th>
+						<th></th>
+						<th>Nombre:</th>
+						<th>Descripción:</th>
+						<th>Precio:</th>
+						<th>Visibilidad:</th>
+						<th></th>
+					</tr>
+				</thead>
+
+				<tr *ngFor="let p of products">
+					<td><input type="checkbox" class="checkbox" id="chk{{p.Id}}"></td>
+					<td>
+						<img alt="Product: {{p.name}} Image" src="{{p.imageUrl}}" width="70" height="auto" align="center">
+					</td>
+					<td>{{p.name}}</td>
+					<td>{{p.description}}</td>
+					<td>L. {{p.price}}</td>
+					<td>
+						<ui-switch></ui-switch>
+					</td>
+					<td>
+						<button id="{{p.Id}}" class="btn btn-info btn-flat fa fa-pencil"></button>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</section>
+

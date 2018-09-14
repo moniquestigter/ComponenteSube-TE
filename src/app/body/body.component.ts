@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do'
+import { UiSwitchModule } from 'ngx-ui-switch';
 @Component({
   selector: 'app-body',
   templateUrl: './body.component.html',
@@ -13,18 +14,17 @@ import 'rxjs/add/operator/do'
 @Injectable()
 export class BodyComponent implements OnInit {
 
-  constructor(private appSettingsService, private http: HttpClient) { }
+  constructor(private http: HttpClient) { }
+
+  products: string [];
+
+  _productURL = '../../assets/products.json';   
 
   ngOnInit() {
-    this.appSettingsService.getJSON().subscribe(data => {
-      console.log(data)
-  });
+    this.http.get(this._productURL).subscribe(prods=>{
+          this.products = prods as string [];
+        }
+      );
   }
-
-  private _productURL = 'assets/prueba.json';    
-  getProducts(): Observable<any> {
-        return this.http.get(this._productURL).map((response : Response) => <any> response.json())
-        .do(data =>console.log(JSON.stringify(data)));
-}
 
 }
