@@ -16,7 +16,7 @@
 						</tr>
 					</thead>
 
-					<tr *ngFor="let p of products">
+					<tr *ngFor="let p of products | filter:globals.searchQuery">
 						<td><input type="checkbox" class="checkbox" id="chk{{p.Id}}"></td>
 						<td>
 							<img alt="Product: {{p.name}} Image" src="{{p.imageUrl}}" width="70" height="auto" align="center">
