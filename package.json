@@ -26,6 +26,8 @@
     "devextreme": "^17.1.12",
     "devextreme-angular": "^17.1.12",
     "ng2-search-filter": "^0.4.7",
+    "ngx-bootstrap": "^3.0.1",
+    "ngx-order-pipe": "^2.0.1",
     "ngx-ui-switch": "^1.6.1",
     "rxjs": "^6.0.0",
     "rxjs-compat": "^6.3.2",

@@ -14,7 +14,7 @@
 
 <!--SEARCH BAR-->
 <form class="form-inline " style="position:absolute; top:90px; left:400px; ">
-    <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Busqueda" aria-label="Search">
+    <input name="search" for="search" class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Busqueda" aria-label="Search" (keyup)="onKeyUp($event)">
   <i class="fa fa-search" aria-hidden="true"></i>
 </form>
 

@@ -6,19 +6,24 @@ import { HttpClientModule } from '@angular/common/http';
 import {TopBarComponent} from './top-bar/top-bar.component'
 import {BodyComponent} from './body/body.component'
 import { UiSwitchModule } from 'ngx-ui-switch';
+import { OrderPipe } from 'ngx-order-pipe';
+import { Globals } from './search';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 @NgModule({
   declarations: [
     AppComponent,
     TopBarComponent,
-    BodyComponent
+    BodyComponent,
+    OrderPipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    UiSwitchModule
+    UiSwitchModule,
+    Ng2SearchPipeModule
   ],
-  providers: [],
+  providers: [Globals],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
