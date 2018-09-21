@@ -2,9 +2,11 @@
     width: 80%;
     position:absolute;
     top:30%;
-    margin-left: 10%;
+    left: 10%;
 }
 
-.glyphicon glyphicon-pencil{
-  background-color: black;
+#pencil{
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
 }

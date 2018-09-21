@@ -5,7 +5,6 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do';
 import { Globals } from '../search';
 
-
 @Component({
   selector: 'app-body',
   templateUrl: './body.component.html',
@@ -18,10 +17,13 @@ export class BodyComponent implements OnInit {
   	this.checks = "onClick";
   }
 
+  isMobile: boolean;
   products: string [];
   checks: string;
+  
 
   ngOnInit() {
+    this.isMobile = (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
     this.globals.searchQuery = "";
     this.httpService.get('../../assets/products.json').subscribe(
       data => {

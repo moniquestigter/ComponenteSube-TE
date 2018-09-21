@@ -1,37 +1,42 @@
-<!--DROPDOWN FILTROS-->
-<div class="dropdown" style="position:absolute; top:90px; left:300px;">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Filtros
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a href="#">Todo</a></li>
-    <li><a href="#">Sin Leer</a></li>
-		<li><a href="#">Sin Inventario</a></li>
-		<li><a href="#">Sin Terminar</a></li>
-  </ul>
-</div>
+<div class="row" top=10%;>
+  
+  <!--DROPDOWN FILTROS-->
+  <div id="column" class="dropDown" style="width: 25%;">
+    <button class="btn btn-default dropdown-toggle"   style="margin:0 auto; display: block;width: 85%" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      Filtros
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+      <li><a href="#">Todo</a></li>
+      <li><a href="#">Sin Leer</a></li>
+      <li><a href="#">Sin Inventario</a></li>
+      <li><a href="#">Sin Terminar</a></li>
+    </ul>
+  </div>
 
-<!--SEARCH BAR-->
-<form class="form-inline " style="position:absolute; top:90px; left:400px; ">
-    <input name="search" for="search" class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Busqueda" aria-label="Search" (keyup)="onKeyUp($event)">
-  <i class="fa fa-search" aria-hidden="true"></i>
-</form>
+  <!--SEARCH BAR-->
+  <div id="column" class="searchBar" style="width: 45%;">
+    <form class="form-inline ">
+        <input name="search" style="margin:0 auto; display: block; width: 85%" for="search" class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Busqueda" aria-label="Search" (keyup)="onKeyUp($event)">
+      <i class="fa fa-search" aria-hidden="true"></i>
+    </form>
+  </div>
 
-<!--DROPDOWN ACCIONES-->
-<div class="dropdown" style="position:absolute; top:90px; left:700px;">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Acciones
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-    <li><a href="#">Eliminar</a></li>
-    <li><a href="#">Esconder</a></li>
-		<li><a href="#">Volver Visible</a></li>
-  </ul>
-</div>
+  <!--DROPDOWN ACCIONES-->
+  <div id="column" class="dropdown" style="width: 15%;">
+    <button class="btn btn-default dropdown-toggle"  style="margin:0 auto; display: block;width: 85%" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      Acciones
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+      <li><a href="#">Eliminar</a></li>
+      <li><a href="#">Esconder</a></li>
+      <li><a href="#">Volver Visible</a></li>
+    </ul>
+  </div>
 
-<!--AGREGAR-->
-<div class="col-md-2 col-md-offset-10" style="position:absolute; top:90px; left: -6cm;">
-	<button type="button" class="btn btn-primary">+Agregar</button>
+  <!--AGREGAR-->
+  <div id="column" class="Agregar" style="width: 15%;">
+    <button type="button"   style="margin:0 auto; display: block;width: 85%" class="btn btn-primary">+Agregar</button>
+  </div>
 </div>
