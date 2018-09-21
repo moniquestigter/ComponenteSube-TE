@@ -9,6 +9,8 @@ import { UiSwitchModule } from 'ngx-ui-switch';
 import { OrderPipe } from 'ngx-order-pipe';
 import { Globals } from './search';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import {DataTableModule} from "angular-6-datatable";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     FormsModule,
     HttpClientModule,
     UiSwitchModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    DataTableModule
   ],
   providers: [Globals],
   bootstrap: [AppComponent]
