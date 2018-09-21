@@ -1,78 +1,96 @@
-<div class="list" >
-	<section class="content" >
-		<div class="box box-success">
-			<div class="box-header"></div>
-			<div class="box-body table-responsive no-padding">
-				<table class="table table-striped" [mfData]="products" #mf="mfDataTable" [mfRowsOnPage]="10">
-					<thead>
-						<tr role="row">
-							<th><input type="checkbox" class="checkbox" id="selectAll"></th>
-							<th style="width: 15%"></th>	
-							<th style="width: 20%">
-								<mfDefaultSorter by="name">Nombre</mfDefaultSorter>
-							</th>
-							<th style="width: 30%">
-								<mfDefaultSorter by="description">Descripcion</mfDefaultSorter>
-							</th>
-							<th style="width: 15%">
-								<mfDefaultSorter by="price">Precio</mfDefaultSorter>
-							</th>
-							<th style="width: 15%">
-								<mfDefaultSorter by="name">Visibilidad</mfDefaultSorter>
-							</th>
-							<th style="width: 5%"></th>
-						</tr>
-					</thead>
+<div>
+		<div class="list" >
+			<section class="content" >
+				<div class="box box-success">
+					<div class="box-header"></div>
+					<div class="box-body table-responsive no-padding">
+						<table class="table table-striped" [mfData]="products" #mf="mfDataTable" [mfRowsOnPage]="10">
+							<thead>
+								<tr role="row">
+									<th><input type="checkbox" class="checkbox" id="selectAll"></th>
+									<th style="width: 15%"></th>	
+									<th style="width: 20%">
+										<mfDefaultSorter by="name">Nombre</mfDefaultSorter>
+									</th>
+									<th style="width: 30%">
+										<mfDefaultSorter by="description">Descripcion</mfDefaultSorter>
+									</th>
+									<th style="width: 15%">
+										<mfDefaultSorter by="price">Precio</mfDefaultSorter>
+									</th>
+									<th style="width: 15%">
+										<mfDefaultSorter by="Visibilidad">Visibilidad</mfDefaultSorter>
+									</th>
+									<th style="width: 5%"></th>
+								</tr>
+							</thead>
+	
+							<tr *ngFor="let item of mf.data | filter:globals.searchQuery">
+								<td><input type="checkbox" ng-model="item.selected" selected="item.selected"></td>
+								<td>
+									<img alt="Product: {{item.name}} Image" src="{{item.imageUrl}}" width="70" height="auto" align="center">
+								</td>
+								<td id="text1">{{item.name}}</td>
+								<td>{{item.description}}</td>
+								<td>L. {{item.price}}</td>
+								<td>
+									<ui-switch size="small"></ui-switch>
+								</td>
+								<td>
+									<button type="button" class="btn btn-default btn-sm" id="pencil">
+										<span class="glyphicon glyphicon-pencil"></span> 
+									</button>
+								</td>
+							</tr>
+							<tfoot>
+								<tr>
+									<td align="center" colspan="8">
+										<mfBootstrapPaginator></mfBootstrapPaginator>
+									</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	
 
-					<tr *ngFor="let item of mf.data | filter:globals.searchQuery">
-						<td><input type="checkbox" class="checkbox" id="chk{{item.Id}}"></td>
-						<td>
-							<img alt="Product: {{item.name}} Image" src="{{item.imageUrl}}" width="70" height="auto" align="center">
-						</td>
-						<td id="text1">{{item.name}}</td>
-						<td>{{item.description}}</td>
-						<td>L. {{item.price}}</td>
-						<td>
-							<ui-switch size="small"></ui-switch>
-						</td>
-						<td>
-							<button type="button" class="btn btn-default btn-sm" id="pencil">
+
+<div>
+	<section class = "content">
+		<div class = "box box-success">
+			<div class = "box-header"></div>
+			<div class = "box-body no-padding">
+				<div *ngIf = "products">
+					<div class="table table-striped" *ngFor = "let item of products | filter:globals.searchQuery">
+						<div class="input-group" align="center" style="float:left;">
+							<img alt="Product: {{item.name}} Image" src="{{item.imageUrl}}" width="100" height="100" onerror="this.src='../../assets/product_image_default.png'" align="left">
+						</div>
+						<div>
+							<label class="text-primary offset-1" style="margin-left: 10px;">{{item.name}}</label>
+							<br>
+							<label class="offset-1" style="margin-left: 10px;">{{item.description}}</label>
+							<br>
+							<label class="offset-1" style="margin-left: 10px;">L. {{item.price}}</label>
+						</div>
+						
+						<br>
+						<br>
+						<div>
+							<ui-switch size="small" style="float:left;margin-left: 50px;">
+								<span>Visibilidad</span>
+							</ui-switch>
+
+							<button type="button" class="btn btn-default btn-sm" id="pencil" style="margin-left: 50px;">
 								<span class="glyphicon glyphicon-pencil"></span> 
 							</button>
-						</td>
-					</tr>
-					<tfoot>
-						<tr>
-							<td align="center" colspan="8">
-								<mfBootstrapPaginator></mfBootstrapPaginator>
-							</td>
-						</tr>
-					</tfoot>
-				</table>
+						</div>
+						
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
 </div>
-
-
-
-<ng-template #mobileTable>
-		<section class = "content">
-			<div class = "box box-success">
-				<div class = "box-header"></div>
-				<div class = "box-body no-padding">
-					<div *ngIf = "arrProds">
-						<div class="container" *ngFor = "let prod of arrProds | filter:globals.searchQuery">
-							<div class="input-group" align="center">
-								<img alt="Product: {{prod.name}} Image" src="{{prod.imageUrl}}" width="100" height="100" onerror="this.src='../../assets/product_image_default.png'" align="left">
-								<label class="text-primary offset-1">{{prod.name}}</label>
-								<label class="offset-1">L. {{prod.price}}</label>
-								<label class="offset-1">{{prod.description}}</label>
-							</div>
-							<br>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-	</ng-template>
