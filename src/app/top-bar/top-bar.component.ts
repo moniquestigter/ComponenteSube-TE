@@ -11,9 +11,12 @@ import { Globals } from '../search';
 })
 export class TopBarComponent {
 
+  mobileView: boolean;
+
   constructor(private globals:Globals) { }
 
   ngOnInit() {
+    this.mobileView = (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
   }
   onKeyUp(event: any){
   	this.globals.searchQuery = event.target.value;

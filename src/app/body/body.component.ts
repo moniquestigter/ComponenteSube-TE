@@ -17,19 +17,19 @@ export class BodyComponent implements OnInit {
   	this.checks = "onClick";
   }
 
-  isMobile: boolean;
+  mobileView: boolean;
   products: string [];
   checks: string;
   
 
   ngOnInit() {
-    this.isMobile = (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+    this.mobileView = (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
     this.globals.searchQuery = "";
     this.httpService.get('../../assets/products.json').subscribe(
       data => {
         this.products = data as string [];
-        this.products.map(function(prod){
-          prod["selected"] = true;
+        this.products.map(function(item){
+          item["selected"] = true;
         });
       },
       (err: HttpErrorResponse) =>{
@@ -39,8 +39,8 @@ export class BodyComponent implements OnInit {
   }
 
   check() {
-  	this.products.map(function(prod){
-  		prod["selected"] = true;
+  	this.products.map(function(item){
+  		item["selected"] = true;
   	});
   }
 
