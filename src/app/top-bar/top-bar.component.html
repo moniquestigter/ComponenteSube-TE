@@ -1,8 +1,15 @@
-<div class="row" top=10%;>
+<div *ngIf = "mobileView; else normalView">
+  <!--SEARCH BAR-->
+  <div id="columnMob" class="searchBar" style=" margin-top:10%;">
+    <form class="form-inline ">
+      <input name="search" style="margin:0 auto; width: 80%;display: block;margin-top:1% " for="search" class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Busqueda" aria-label="Search" (keyup)="onKeyUp($event)">
+      <i class="fa fa-search" aria-hidden="true"></i>
+    </form>
+  </div>
   
   <!--DROPDOWN FILTROS-->
-  <div id="column" class="dropDown" style="width: 25%;">
-    <button class="btn btn-default dropdown-toggle"   style="margin:0 auto; display: block;width: 65%" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+  <div id="columnMob" class="dropDown" >
+    <button class="btn btn-default dropdown-toggle"   style="margin:0 auto;display: block;width:80%; margin-top:1%;" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
       Filtros
       <span class="caret"></span>
     </button>
@@ -14,29 +21,63 @@
     </ul>
   </div>
 
-  <!--SEARCH BAR-->
-  <div id="column" class="searchBar" style="width: 45%;">
-    <form class="form-inline ">
-        <input name="search" style="margin:0 auto; display: block; width: 85%" for="search" class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Busqueda" aria-label="Search" (keyup)="onKeyUp($event)">
-      <i class="fa fa-search" aria-hidden="true"></i>
-    </form>
-  </div>
-
   <!--DROPDOWN ACCIONES-->
-  <div id="column" class="dropdown" style="width: 15%;">
-    <button class="btn btn-default dropdown-toggle"  style="margin:0 auto; display: block;width: 65%" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-      Acciones
-      <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-      <li><a href="#">Eliminar</a></li>
-      <li><a href="#">Esconder</a></li>
-      <li><a href="#">Volver Visible</a></li>
-    </ul>
-  </div>
+  <div id="columnMob" class="dropdown" style="width: 50%;float: left;">
+      <button class="btn btn-default dropdown-toggle"  style="margin: 2% 0% 0% 20%; width:80%;display: block;" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        Acciones
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <li><a href="#">Eliminar</a></li>
+        <li><a href="#">Esconder</a></li>
+        <li><a href="#">Volver Visible</a></li>
+      </ul>
+    </div>
 
-  <!--AGREGAR-->
-  <div id="column" class="Agregar" style="width: 15%;">
-    <button type="button"   style="margin:0 auto; display: block;width: 65%" class="btn btn-primary">+Agregar</button>
-  </div>
+    <!--AGREGAR-->
+    <div id="columnMob" class="Agregar" style="width: 50%;float: left;">
+      <button type="button"   style="margin: 2% 40% 20% 0%;display: block;width:80%" class="btn btn-primary">+Agregar</button>
+    </div>
 </div>
+
+<ng-template #normalView>
+  <div class="row" top=10%;>
+  
+    <div id="column" class="dropDown" style="width: 25%;">
+      <button class="btn btn-default dropdown-toggle"   style="margin:0 auto; display: block;width: 65%" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        Filtros
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li><a href="#">Todo</a></li>
+        <li><a href="#">Sin Leer</a></li>
+        <li><a href="#">Sin Inventario</a></li>
+        <li><a href="#">Sin Terminar</a></li>
+      </ul>
+    </div>
+    
+    <div id="column" class="searchBar" style="width: 45%;">
+      <form class="form-inline ">
+          <input name="search" style="margin:0 auto; display: block; width: 85%" for="search" class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Busqueda" aria-label="Search" (keyup)="onKeyUp($event)">
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </form>
+    </div>
+    
+    <div id="column" class="dropdown" style="width: 15%;">
+      <button class="btn btn-default dropdown-toggle"  style="margin:0 auto; display: block;width: 65%" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        Acciones
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <li><a href="#">Eliminar</a></li>
+        <li><a href="#">Esconder</a></li>
+        <li><a href="#">Volver Visible</a></li>
+      </ul>
+    </div>
+    
+    <div id="column" class="Agregar" style="width: 15%;">
+      <button type="button"   style="margin:0 auto; display: block;width: 65%" class="btn btn-primary">+Agregar</button>
+    </div>
+  </div>
+</ng-template>
+  
