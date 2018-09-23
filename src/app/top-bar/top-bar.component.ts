@@ -1,7 +1,4 @@
-import { NgModule, Component, ViewChild, enableProdMode } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { NgModule, Component, HostListener } from '@angular/core';
 import { Globals } from '../search';
 
 @Component({
@@ -20,5 +17,14 @@ export class TopBarComponent {
   }
   onKeyUp(event: any){
   	this.globals.searchQuery = event.target.value;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  sizeChange(event) {
+    if(window.innerWidth <= 800)
+      this.mobileView = true;
+    else
+      this.mobileView = false;
+     console.log(window.innerWidth);
   }
 }

@@ -6,26 +6,27 @@
 				<div class = "box-body no-padding">
 					<div *ngIf = "products">
 						<div class="table table-striped boxed" *ngFor = "let item of products | filter:globals.searchQuery" >
-							<div class="input-group" align="center" style="float:left;">
+							<div class="input-group" align="center" style="float:left;margin-left: 3%;margin-top: 3%">
 								<img alt="Product: {{item.name}} Image" src="{{item.imageUrl}}" width="100" height="100" onerror="this.src='../../assets/product_image_default.png'" align="left">
 							</div>
 							<div>
-								<label class="text-primary offset-1" style="margin-left: 10px;">{{item.name}}</label>
+								<label class="text-primary offset-1" style="margin-left: 3%;margin-top: 3%">{{item.name}}</label>
 								<br>
-								<label class="offset-1" style="margin-left: 10px; font-size: 80%">{{item.description}}</label>
+								<label class="offset-1" style="margin-left: 3%;margin-top: 3%; font-size: 80%">{{item.description}}</label>
 								<br>
-								<label class="offset-1" style="margin-left: 10px;">L. {{item.price}}</label>
+								<label class="offset-1" style="margin-left: 3%;">L. {{item.price}}</label>
 								
 							</div>
 							
 							<br>
 							<br>
 							
-							<div>
-								<ui-switch size="small" style="margin-left: 5px;"></ui-switch>
-								<span style="float:left;margin-left: 20px;">Visibilidad:</span>
-								
-								<button type="button" class="btn btn-default btn-sm" id="pencil" style="margin-left: 50px;">
+							<div style="width: 50%;float: left;margin-left: 10%">
+								<span style="float:left;margin-left: 5%;">Visibilidad:</span>
+								<ui-switch size="small" style="margin-left: 10%;margin-top: 10%;"></ui-switch>
+							</div>
+							<div style="">
+								<button type="button" class="btn btn-default btn-sm" id="pencil" style="margin-left: 15%;">
 									<span class="glyphicon glyphicon-pencil"></span> 
 								</button>
 							</div>
