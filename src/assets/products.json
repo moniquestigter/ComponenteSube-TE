@@ -2,6 +2,7 @@
   {
     "id": "1",
     "createdAt": 1527982841,
+    "description": "Descripcion del Producto # 1",
     "name": "Producto 1",
     "imageUrl": "https://unsplash.it/300?image=1",
     "price": 8,
