@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,HostListener  } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HttpErrorResponse } from '@angular/common/http';
 import 'rxjs/add/operator/map';
@@ -37,7 +37,14 @@ export class BodyComponent implements OnInit {
       }
     );
   }
-
+  @HostListener('window:resize', ['$event'])
+  sizeChange(event) {
+    if(window.innerWidth <= 800)
+      this.mobileView = true;
+    else
+      this.mobileView = false;
+     console.log(window.innerWidth);
+  }
   check() {
   	this.products.map(function(item){
   		item["selected"] = true;
